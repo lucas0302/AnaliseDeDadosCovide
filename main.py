@@ -24,16 +24,16 @@ sns.set(font_scale=1.2)
 print("Carregando dados...")
 
 # Dados de COVID por estados
-df_estados = pd.read_excel('Basededado/DadosCovid-Estados.xlsx')
+df_estados = pd.read_excel('AnaliseDeDadosCovide/Basededado/DadosCovid-Estados.xlsx')
 
 # Dados de COVID por regiões
-df_regioes = pd.read_excel('Basededado/DadosCovid-Regiões.xlsx')
+df_regioes = pd.read_excel('AnaliseDeDadosCovide/Basededado/DadosCovid-Regiões.xlsx')
 
 # Dados de vacinação
-df_vacinacao = pd.read_excel('Basededado/Dados-Vacinação.xlsx')
-df_vacinacao_2021 = pd.read_excel('Basededado/Dados-Vacinação-2021.xlsx')
-df_vacinacao_2022 = pd.read_excel('Basededado/Dados-Vacinação-2022.xlsx')
-df_vacinacao_2023 = pd.read_excel('Basededado/Dados-Vacinação-2023.xlsx')
+df_vacinacao = pd.read_excel('AnaliseDeDadosCovide/Basededado/Dados-Vacinação.xlsx')
+df_vacinacao_2021 = pd.read_excel('AnaliseDeDadosCovide/Basededado/Dados-Vacinação-2021.xlsx')
+df_vacinacao_2022 = pd.read_excel('AnaliseDeDadosCovide/Basededado/Dados-Vacinação-2022.xlsx')
+df_vacinacao_2023 = pd.read_excel('AnaliseDeDadosCovide/Basededado/Dados-Vacinação-2023.xlsx')
 
 # 2. Exibir informações sobre os dados
 print("\n===== INFORMAÇÕES SOBRE OS DADOS =====")
