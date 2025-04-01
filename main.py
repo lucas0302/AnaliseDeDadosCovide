@@ -421,6 +421,4 @@ if 'letalidade_categoria' in df_analise.columns and 'y_class' in locals():
     print(f"Média F1: {cv_scores_tree.mean():.2f}")
     print(f"Desvio Padrão F1: {cv_scores_tree.std():.2f}")
 
-print("\n===== ANÁLISE FINALIZADA =====")
-print("Os gráficos foram salvos no diretório 'visualizacoes/'")
-print("Obrigado por utilizar este script de análise!")
+print("\n ANÁLISE FINALIZADA ")
