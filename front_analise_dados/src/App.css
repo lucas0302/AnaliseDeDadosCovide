@@ -1,0 +1,170 @@
+/* Estilos gerais */
+.dashboard {
+  min-height: 100vh;
+  background-color: #f5f7fa;
+  padding: 20px;
+  max-width: 1800px;
+  margin: 0 auto;
+}
+
+/* Header */
+.dashboard-header {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #1a237e;
+}
+
+.dashboard-header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.subtitle {
+  color: #5c6bc0;
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+/* Cards informativos */
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.info-card {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-5px);
+}
+
+.info-card h3 {
+  color: #1a237e;
+  margin: 0 0 10px 0;
+  font-size: 1.2rem;
+}
+
+.card-value {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #2196F3;
+  margin: 10px 0;
+}
+
+.card-label {
+  color: #757575;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* Grid de gráficos */
+.charts-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.chart-card {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+}
+
+.chart-card h2 {
+  color: #1a237e;
+  margin: 0 0 20px 0;
+  font-size: 1.5rem;
+}
+
+.plot-container {
+  flex: 1;
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 400px;
+}
+
+/* Loading */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f5f7fa;
+}
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #2196F3;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 20px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Footer */
+.dashboard-footer {
+  text-align: center;
+  padding: 20px;
+  color: #757575;
+  font-size: 0.9rem;
+}
+
+/* Responsividade */
+@media (max-width: 1200px) {
+  .charts-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .chart-card {
+    min-height: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard {
+    padding: 10px;
+  }
+
+  .dashboard-header h1 {
+    font-size: 2rem;
+  }
+
+  .chart-card {
+    padding: 15px;
+  }
+
+  .plot-container {
+    min-height: 300px;
+  }
+}
+
+/* Personalização dos gráficos Plotly */
+.js-plotly-plot .plotly .modebar {
+  background: transparent !important;
+}
+
+/* Ajuste para legendas dos gráficos */
+.js-plotly-plot .plotly .legend {
+  font-size: 12px !important;
+} 
