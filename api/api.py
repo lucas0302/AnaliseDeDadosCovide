@@ -2,10 +2,10 @@ from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 from fastapi.encoders import jsonable_encoder
+from typing import Any
 import pandas as pd
 import numpy as np
 import os
-from typing import Dict, List, Union, Any
 
 app = FastAPI()
 
@@ -38,10 +38,10 @@ def sanitize_data(data: Any) -> Any:
 def carregar_dados_vacinacao():
     try:
         # Carregar os dados de vacinação
-        df_2021 = pd.read_excel('Basededado/Dados-Vacinação-2021.xlsx')
-        df_2022 = pd.read_excel('Basededado/Dados-Vacinação-2022.xlsx')
-        df_2023 = pd.read_excel('Basededado/Dados-Vacinação-2023.xlsx')
-        df_2024 = pd.read_excel('Basededado/Dados-Vacinação-2024.xlsx')
+        df_2021 = pd.read_excel('../Basededado/Dados-Vacinação-2021.xlsx')
+        df_2022 = pd.read_excel('../Basededado/Dados-Vacinação-2022.xlsx')
+        df_2023 = pd.read_excel('../Basededado/Dados-Vacinação-2023.xlsx')
+        df_2024 = pd.read_excel('../Basededado/Dados-Vacinação-2024.xlsx')
 
         def normalizar_colunas(df):
             mapping = {
@@ -73,8 +73,8 @@ def carregar_dados_vacinacao():
 def carregar_dados_covid():
     try:
         # Carregar dados de COVID por estados e regiões
-        df_estados = pd.read_excel('Basededado/DadosCovid-Estados.xlsx')
-        df_regioes = pd.read_excel('Basededado/DadosCovid-Regiões.xlsx')
+        df_estados = pd.read_excel('../Basededado/DadosCovid-Estados.xlsx')
+        df_regioes = pd.read_excel('../Basededado/DadosCovid-Regiões.xlsx')
 
         # Renomear colunas
         df_estados = df_estados.rename(columns={
